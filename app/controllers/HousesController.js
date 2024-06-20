@@ -1,4 +1,5 @@
 import { AppState } from "../AppState.js"
+import { Form } from "../models/Form.js"
 import { houseService } from "../services/HouseService.js"
 import { getFormData } from "../utils/FormHandler.js"
 import { setHTML } from "../utils/Writer.js"
@@ -8,6 +9,12 @@ export class HousesController {
   constructor() {
     AppState.on('houses', this.drawHouse)
     this.drawHouse()
+    this.drawForm()
+  }
+  drawForm() {
+    let form = ""
+    form += Form
+    setHTML('form', form)
   }
   drawHouse() {
     let houses = ''
