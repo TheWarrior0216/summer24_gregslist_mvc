@@ -1,4 +1,4 @@
-export class Form {
+class Form {
   get someFormTemplate() {
     return `
     <form onsubmit="app.HousesController.createHome()" class=" justify-content-center row">
@@ -38,3 +38,4 @@ export class Form {
         </form>`
   }
 }
+export const Forming = new Form()
