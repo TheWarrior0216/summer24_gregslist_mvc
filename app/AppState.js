@@ -1,10 +1,10 @@
 import { Car } from './models/Car.js'
+import { House } from "./models/House.js"
 import { EventEmitter } from './utils/EventEmitter.js'
 import { createObservableProxy } from './utils/ObservableProxy.js'
 
 class ObservableAppState extends EventEmitter {
 
-  /**@type {import('./models/Example.js').Example[]} */
   examples = []
 
   /**
@@ -63,6 +63,12 @@ class ObservableAppState extends EventEmitter {
       description: 'RIP in the jalopy jungle',
       color: '#8c9197'
     }),
+  ]
+  /**
+   * @type { House[] }
+   */
+  houses = [
+    new House({ year: '1974', bedrooms: 3, bathrooms: 2.5, sqft: 1400, price: 375000, description: 'Newly renovated mid-century modern home', imgUrl: 'https://www.houseplans.net/uploads/plans/25578/elevations/58094-1200.jpg?v=030421150757' })
   ]
 }
 
