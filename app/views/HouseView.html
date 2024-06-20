@@ -5,9 +5,9 @@
     </div>
     <div>
       <h3> Add Your Home!!!</h3>
-      <div class="col-8">
-        <div class="row">
-          <form onsubmit="app.HousesController.createHome()" class=" justify-content-center row">
+      <form onsubmit="app.HousesController.createHome()" class=" justify-content-center row">
+        <div class="col-8">
+          <div class="row">
             <div class="col-md-6">
               <label for="Bedroom" class="form-label">Bedrooms</label>
               <input name="bedrooms" type="number" class="form-control" id="Bedroom">
@@ -35,11 +35,11 @@
             <div class="col-12">
               <label for="Description" class="form-label">Add a Description</label>
               <input name="description" type="text" class="form-control" id="Description">
-              <button class="btn btn-rounded btn-outline-info" type="submit"> Submit </button>
+              <button class="btn btn-rounded btn-outline-info mt-3" type="submit"> Submit </button>
             </div>
-          </form>
+          </div>
         </div>
-      </div>
+      </form>
     </div>
     <div id="House">
 

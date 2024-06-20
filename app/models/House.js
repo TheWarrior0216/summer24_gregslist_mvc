@@ -1,9 +1,12 @@
+import { generateId } from "../utils/GenerateId.js"
+
 export class House {
   /**
-   * @param {{ name: string; model: string; year: Date; imgUrl: string; price: number; sqft: number; description: string; bathrooms: number; bedrooms: number; }} data
+   * @param {{ name: string; model: string; year: Date; imgUrl: string; price: number; sqft: number; description: string; bathrooms: number; bedrooms: number; id: string}} data
    */
   constructor(data) {
     this.year = data.year
+    this.id = generateId()
     this.name = data.name
     this.bedrooms = data.bedrooms
     this.bathrooms = data.bathrooms
@@ -27,7 +30,7 @@ export class House {
             <h4 class ="pb-2"> ${this.sqft} sqft</h4>
             <h4 class ="pb-2"> ${this.bedrooms} bedroom ${this.bathrooms} bath</h4>
             <div class= "text-end pt-5">
-            <button class = "btn btn-outline-info"> Remove Listing </button>
+            <button class = "btn btn-outline-info" onclick = "app.HousesController.destroyHome('${this.id}')"> Remove Listing </button>
             </div>
           </div>
         </div>

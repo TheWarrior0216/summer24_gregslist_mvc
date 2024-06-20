@@ -24,4 +24,7 @@ export class HousesController {
     // @ts-ignore
     form.reset()
   }
+  destroyHome(ID) {
+    houseService.destroyHome(ID)
+  }
 }
